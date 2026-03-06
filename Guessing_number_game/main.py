@@ -19,43 +19,44 @@ def game():
     difficulty_choose = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
     if difficulty_choose == 'easy':
         user_attempts = easy_turn
-        print(f"I am thinking of a number from 1 to 100... You have {user_attempts} attempts for guess!")
+        print(f"I am thinking of a number from 1 to 100... You have {user_attempts} attempts to guess the number!")
         while not game_over:
             user_answer = int(input("Insert the correct number: "))
             if user_answer != correct_number:
                 user_attempts -= 1
                 if user_answer < correct_number and user_attempts > 0:
                     print(f"Wrong! Too low.")
-                    print(f"Try again! Your attempts are: {user_attempts}.")
+                    print(f"Try again! Attempts lefts are: {user_attempts}.")
                 elif user_answer > correct_number and user_attempts > 0:
                     print("Wrong! Too High")
-                    print(f"Try again! Your attempts are: {user_attempts}.")
+                    print(f"Try again! Attempts left are: {user_attempts}.")
                 elif user_attempts == 0:
                     game_over = True
                     print(f"You lose! The correct number was: {correct_number}.")
             elif user_answer == correct_number:
-                print(f"You're right! The correct number was: {correct_number}.")
+                print(f"You won! The correct number was: {correct_number}.")
                 game_over = True
 
     if difficulty_choose == 'hard':
         user_attempts = hard_turns
-        print(f"I am thinking of a number from 1 to 100... You have {user_attempts} attempts for guess!")
+        print(f"I am thinking of a number from 1 to 100... You have {user_attempts} attempts to guess the number!")
         while not game_over:
             user_answer = int(input("Insert the correct number: "))
             if user_answer != correct_number:
                 user_attempts -= 1
                 if user_answer < correct_number and user_attempts > 0:
                     print(f"Wrong! Too low.")
-                    print(f"Try again! Your attempts are: {user_attempts}.")
+                    print(f"Try again! Attempts left: {user_attempts}.")
                 elif user_answer > correct_number and user_attempts > 0:
                     print("Wrong! Too High")
-                    print(f"Try again! {user_attempts}.")
+                    print(f"Try again! Attempts left: {user_attempts}.")
                 elif user_attempts == 0:
                     game_over = True
                     print(f"You lose! The correct number was: {correct_number}.")
             elif user_answer == correct_number:
-                print(f"You're right! The correct number was: {correct_number}.")
+                print(f"You won! The correct number was: {correct_number}.")
                 game_over = True
 
 game()
+
 

@@ -18,4 +18,4 @@ Choose between easy (10 attempts) or hard (5 attempts) difficulty.
 
 ## Built with
 - Python 3
-- Started learning: December 2026
+- Started learning: December 2025
